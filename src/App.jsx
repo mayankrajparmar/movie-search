@@ -13,7 +13,7 @@ function App() {
   const fetchMovies = async (query = "popular") => {
     try {
       const { data } = await axios.get(
-        `http://www.omdbapi.com/?s=${query}&apikey=${API_KEY}`
+        `https://www.omdbapi.com/?s=${query}&apikey=${API_KEY}`
       );
       if (data.Search) setMovies(data.Search);
       else setMovies([]);
